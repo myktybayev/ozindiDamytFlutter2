@@ -7,16 +7,24 @@ class MyHeaderDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
+      decoration: BoxDecoration(color: Colors.white54, boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.5),
+          spreadRadius: 3,
+          blurRadius: 7,
+          offset: Offset(0, 1),
+        )
+      ]),
       height: 200,
-      padding: EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.only(top: 20, left: 10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.only(bottom: 10),
+            margin: const EdgeInsets.only(bottom: 10),
             height: 70,
             width: 70,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
                 image: NetworkImage(
@@ -25,6 +33,23 @@ class MyHeaderDrawer extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(
+            width: 20,
+          ),
+          const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Username',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              const Text(
+                'user@gmail.com',
+                style: TextStyle(fontSize: 15),
+              )
+            ],
+          )
         ],
       ),
     );

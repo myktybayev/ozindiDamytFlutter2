@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ozindi_damyt/core/navigation/my_header_drawer.dart';
 
 class Navigation extends StatelessWidget {
   const Navigation({super.key});
@@ -51,6 +52,7 @@ class Navigation extends StatelessWidget {
               onTap: () {},
             ),
             ListTile(
+              leading: Icon(Icons.add),
               title: Text('Жаңа ұсыныстар'),
               onTap: () {},
             )
