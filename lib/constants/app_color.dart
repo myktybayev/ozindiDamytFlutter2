@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
-  static const Color mainColor = Color(0xFFE51111);
+  static const Color mainColor = Color(0xFFE03333);
+  static const Color secondColor = Color(0xFFFF9E9E);
+  static const Color thirdColor = Color(0xFFFFD5D5);
+  static const Color fourthColor = Color(0xFFEBE6E6);
   static const Color whiteColor = Color(0xFFFFFFFF);
-  static const Color secondColor = Color(0xFFF2F2F2);
-  static const Color thirdColor = Color(0x805D3838);
   static const Color blackColor = Color(0xFF000000);
-
-  static const Color tapsyrmaColor1 = Color(0xFF4CC590);
-  static const Color tapsyrmaColor2 = Color(0xFF1A2A89);
-  static const Color tapsyrmaColor3 = Color(0xFFB950EB);
-  static const Color tapsyrmaColor4 = Color(0xFFFF7648);
-
-// Add more color constants as needed for your app's design
 }
