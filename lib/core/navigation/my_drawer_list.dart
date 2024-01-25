@@ -1,66 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:ozindi_damyt/core/navigation/my_header_drawer.dart';
-import 'package:ozindi_damyt/core/pades/cinema/cinema_page.dart';
-import 'package:ozindi_damyt/core/pades/hobby/hobby_page.dart';
-import 'package:ozindi_damyt/core/pades/library/library_page.dart';
-import 'package:ozindi_damyt/core/pades/maraphone/maraphone_page.dart';
-import 'package:ozindi_damyt/core/pades/new_recommendation/new_recommendation_page.dart';
-import 'package:ozindi_damyt/core/pades/podcast/podcast_page.dart';
-import 'package:ozindi_damyt/core/pades/proforintation/proforintation_page.dart';
-import 'package:ozindi_damyt/core/pades/quiz/quiz_page.dart';
-import 'package:ozindi_damyt/core/pades/sport/sport_page.dart';
-import 'package:ozindi_damyt/core/pades/stoury/stoury_page.dart';
 
-class Navigation extends StatefulWidget {
-  const Navigation({super.key});
+class MyDrawerList extends StatefulWidget {
+  const MyDrawerList({super.key});
 
   @override
-  State<Navigation> createState() => NavigationState();
+  State<MyDrawerList> createState() => _MyDrawerListState();
 }
 
-class NavigationState extends State<Navigation> {
+class _MyDrawerListState extends State<MyDrawerList> {
   var currentPage = DrawerSections.library;
 
   @override
   Widget build(BuildContext context) {
-    var container;
-    if (currentPage == DrawerSections.library) {
-      container = LibraryPage();
-    } else if (currentPage == DrawerSections.stoury) {
-      container = StouryPage();
-    } else if (currentPage == DrawerSections.podcast) {
-      container = PodcastPage();
-    } else if (currentPage == DrawerSections.quiz) {
-      container = QuizPage();
-    } else if (currentPage == DrawerSections.maraphone) {
-      container = MaraphonePage();
-    } else if (currentPage == DrawerSections.proforintation) {
-      container = ProforintationPage();
-    } else if (currentPage == DrawerSections.hobby) {
-      container = HobbyPage();
-    } else if (currentPage == DrawerSections.sport) {
-      container = SportPage();
-    } else if (currentPage == DrawerSections.cinema) {
-      container = CinemaPage();
-    } else if (currentPage == DrawerSections.new_recommendation) {
-      container = NewRecommendationPage();
-    }
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Ozindi Damyt'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: [MyHeaderDrawer(), MyDrawerList()],
-        ),
-      ),
-      body: container,
-    );
-  }
-
-  @override
-  Widget MyDrawerList() {
     return Container(
       padding: EdgeInsets.only(top: 15),
       child: Column(
