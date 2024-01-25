@@ -61,34 +61,31 @@ class NavigationState extends State<Navigation> {
 
   @override
   Widget MyDrawerList() {
-    return Container(
-      padding: EdgeInsets.only(top: 15),
-      child: Column(
-        children: [
-          menuItem(1, "Кітапхана", Icons.dashboard_outlined,
-              currentPage == DrawerSections.library ? true : false),
-          menuItem(2, "Ғибратты әңгімелер", Icons.people_alt_outlined,
-              currentPage == DrawerSections.stoury ? true : false),
-          menuItem(3, "Подкаст", Icons.event,
-              currentPage == DrawerSections.podcast ? true : false),
-          menuItem(4, "Quizz", Icons.notes,
-              currentPage == DrawerSections.quiz ? true : false),
-          Divider(),
-          menuItem(5, "Марафон", Icons.settings_outlined,
-              currentPage == DrawerSections.maraphone ? true : false),
-          menuItem(6, "Профориентация", Icons.notifications_outlined,
-              currentPage == DrawerSections.proforintation ? true : false),
-          Divider(),
-          menuItem(7, "Хобби", Icons.privacy_tip_outlined,
-              currentPage == DrawerSections.hobby ? true : false),
-          menuItem(8, "Спорт", Icons.feedback_outlined,
-              currentPage == DrawerSections.sport ? true : false),
-          menuItem(9, "Кино", Icons.feedback_outlined,
-              currentPage == DrawerSections.cinema ? true : false),
-          menuItem(10, "Жаңа ұсыныстар", Icons.feedback_outlined,
-              currentPage == DrawerSections.new_recommendation ? true : false),
-        ],
-      ),
+    return Column(
+      children: [
+        menuItem(1, "Кітапхана", Icons.dashboard_outlined,
+            currentPage == DrawerSections.library ? true : false),
+        menuItem(2, "Ғибратты әңгімелер", Icons.people_alt_outlined,
+            currentPage == DrawerSections.stoury ? true : false),
+        menuItem(3, "Подкаст", Icons.event,
+            currentPage == DrawerSections.podcast ? true : false),
+        menuItem(4, "Quizz", Icons.notes,
+            currentPage == DrawerSections.quiz ? true : false),
+        Divider(),
+        menuItem(5, "Марафон", Icons.settings_outlined,
+            currentPage == DrawerSections.maraphone ? true : false),
+        menuItem(6, "Профориентация", Icons.notifications_outlined,
+            currentPage == DrawerSections.proforintation ? true : false),
+        Divider(),
+        menuItem(7, "Хобби", Icons.privacy_tip_outlined,
+            currentPage == DrawerSections.hobby ? true : false),
+        menuItem(8, "Спорт", Icons.feedback_outlined,
+            currentPage == DrawerSections.sport ? true : false),
+        menuItem(9, "Кино", Icons.feedback_outlined,
+            currentPage == DrawerSections.cinema ? true : false),
+        menuItem(10, "Жаңа ұсыныстар", Icons.feedback_outlined,
+            currentPage == DrawerSections.new_recommendation ? true : false),
+      ],
     );
   }
 
