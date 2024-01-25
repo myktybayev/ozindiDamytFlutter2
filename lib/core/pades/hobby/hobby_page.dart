@@ -10,7 +10,7 @@ class _HobbyPageState extends State<HobbyPage> {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("Events Page"),
+        child: Text("Hobby Page"),
       ),
     );
   }
