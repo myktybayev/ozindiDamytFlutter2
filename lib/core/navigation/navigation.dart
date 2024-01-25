@@ -51,6 +51,7 @@ class NavigationState extends State<Navigation> {
         title: const Text('Ozindi Damyt'),
       ),
       drawer: Drawer(
+        width: 250,
         child: ListView(
           children: [
             MyHeaderDrawer(),
