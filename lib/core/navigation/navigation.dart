@@ -10,6 +10,7 @@ import 'package:ozindi_damyt/core/pades/proforintation/proforintation_page.dart'
 import 'package:ozindi_damyt/core/pades/quiz/quiz_page.dart';
 import 'package:ozindi_damyt/core/pades/sport/sport_page.dart';
 import 'package:ozindi_damyt/core/pades/stoury/stoury_page.dart';
+import 'package:pixel_perfect/pixel_perfect.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({super.key});
@@ -45,24 +46,31 @@ class NavigationState extends State<Navigation> {
     } else if (currentPage == DrawerSections.new_recommendation) {
       container = NewRecommendationPage();
     }
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Ozindi Damyt'),
-      ),
-      drawer: Drawer(
-        width: 250,
-        child: ListView(
-          children: [
-            MyHeaderDrawer(),
-            const SizedBox(
-              height: 10,
-            ),
-            MyDrawerList()
-          ],
+    return PixelPerfect(
+      assetPath: 'assets/images/design.jpg',
+      scale: 1,
+      initBottom: 20,
+      offset: Offset.zero,
+      initOpacity: 0.4,
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: const Text('Ozindi Damyt'),
         ),
+        drawer: Drawer(
+          width: 235,
+          child: ListView(
+            children: [
+              MyHeaderDrawer(),
+              const SizedBox(
+                height: 13,
+              ),
+              MyDrawerList()
+            ],
+          ),
+        ),
+        body: container,
       ),
-      body: container,
     );
   }
 
@@ -72,24 +80,34 @@ class NavigationState extends State<Navigation> {
       children: [
         menuItem(1, "Кітапхана", "library.png",
             currentPage == DrawerSections.library ? true : false),
+        sb2(),
         menuItem(2, "Ғибратты әңгімелер", "stoury.png",
             currentPage == DrawerSections.stoury ? true : false),
+        sb2(),
         menuItem(3, "Подкаст", "podcast.png",
             currentPage == DrawerSections.podcast ? true : false),
-        menuItem(4, "Quizz", "quiz.png",
+        sb2(),
+        menuItem(4, "Quiziz", "quiz.png",
             currentPage == DrawerSections.quiz ? true : false),
+        sb2(),
         menuItem(5, "Марафон", "marathon.png",
             currentPage == DrawerSections.marathon ? true : false),
+        sb2(),
         menuItem(6, "Профориентация", "proforintation.png",
             currentPage == DrawerSections.proforintation ? true : false),
+        sb2(),
         menuItem(7, "Хобби", "hobby.png",
             currentPage == DrawerSections.hobby ? true : false),
+        sb2(),
         menuItem(8, "Спорт", "sport.png",
             currentPage == DrawerSections.sport ? true : false),
+        sb2(),
         menuItem(9, "Кино", "movies.png",
             currentPage == DrawerSections.cinema ? true : false),
+        sb2(),
         menuItem(10, "Жаңа ұсыныстар", "new_recommendation.png",
             currentPage == DrawerSections.new_recommendation ? true : false),
+        sb2(),
       ],
     );
   }
@@ -128,13 +146,16 @@ class NavigationState extends State<Navigation> {
           padding: EdgeInsets.all(10.0),
           child: Row(
             children: [
+              const SizedBox(
+                width: 15,
+              ),
               Image(
                 image: AssetImage('assets/icons/$icon'),
-                height: 25,
-                width: 25,
+                height: 20,
+                width: 20,
               ),
               const SizedBox(
-                width: 10,
+                width: 17,
               ),
               Expanded(
                 flex: 2,
@@ -152,6 +173,12 @@ class NavigationState extends State<Navigation> {
       ),
     );
   }
+}
+
+SizedBox sb2() {
+  return const SizedBox(
+    height: (2.4),
+  );
 }
 
 enum DrawerSections {

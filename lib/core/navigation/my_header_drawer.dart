@@ -15,15 +15,14 @@ class MyHeaderDrawer extends StatelessWidget {
           offset: Offset(0, 1),
         )
       ]),
-      height: 200,
+      height: 107,
       padding: const EdgeInsets.only(top: 20, left: 10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            margin: const EdgeInsets.only(bottom: 10),
-            height: 70,
-            width: 70,
+            margin: const EdgeInsets.only(bottom: 25, left: 5),
+            height: 51,
+            width: 51,
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
@@ -34,19 +33,21 @@ class MyHeaderDrawer extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            width: 20,
+            width: 22,
           ),
           const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 10,
+              ),
               const Text(
                 'Username',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
               const Text(
                 'user@gmail.com',
-                style: TextStyle(fontSize: 15),
+                style: TextStyle(fontSize: 13),
               )
             ],
           )
