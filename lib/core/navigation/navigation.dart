@@ -130,8 +130,8 @@ class NavigationState extends State<Navigation> {
             children: [
               Image(
                 image: AssetImage('assets/icons/$icon'),
-                height: 30,
-                width: 30,
+                height: 25,
+                width: 25,
               ),
               const SizedBox(
                 width: 10,
@@ -141,9 +141,9 @@ class NavigationState extends State<Navigation> {
                 child: Text(
                   title,
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                  ),
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ],
