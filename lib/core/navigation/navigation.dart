@@ -32,7 +32,7 @@ class NavigationState extends State<Navigation> {
       container = PodcastPage();
     } else if (currentPage == DrawerSections.quiz) {
       container = QuizPage();
-    } else if (currentPage == DrawerSections.maraphone) {
+    } else if (currentPage == DrawerSections.marathon) {
       container = MaraphonePage();
     } else if (currentPage == DrawerSections.proforintation) {
       container = ProforintationPage();
@@ -52,7 +52,13 @@ class NavigationState extends State<Navigation> {
       ),
       drawer: Drawer(
         child: ListView(
-          children: [MyHeaderDrawer(), MyDrawerList()],
+          children: [
+            MyHeaderDrawer(),
+            const SizedBox(
+              height: 10,
+            ),
+            MyDrawerList()
+          ],
         ),
       ),
       body: container,
@@ -63,33 +69,31 @@ class NavigationState extends State<Navigation> {
   Widget MyDrawerList() {
     return Column(
       children: [
-        menuItem(1, "Кітапхана", Icons.dashboard_outlined,
+        menuItem(1, "Кітапхана", "library.png",
             currentPage == DrawerSections.library ? true : false),
-        menuItem(2, "Ғибратты әңгімелер", Icons.people_alt_outlined,
+        menuItem(2, "Ғибратты әңгімелер", "stoury.png",
             currentPage == DrawerSections.stoury ? true : false),
-        menuItem(3, "Подкаст", Icons.event,
+        menuItem(3, "Подкаст", "podcast.png",
             currentPage == DrawerSections.podcast ? true : false),
-        menuItem(4, "Quizz", Icons.notes,
+        menuItem(4, "Quizz", "quiz.png",
             currentPage == DrawerSections.quiz ? true : false),
-        Divider(),
-        menuItem(5, "Марафон", Icons.settings_outlined,
-            currentPage == DrawerSections.maraphone ? true : false),
-        menuItem(6, "Профориентация", Icons.notifications_outlined,
+        menuItem(5, "Марафон", "marathon.png",
+            currentPage == DrawerSections.marathon ? true : false),
+        menuItem(6, "Профориентация", "proforintation.png",
             currentPage == DrawerSections.proforintation ? true : false),
-        Divider(),
-        menuItem(7, "Хобби", Icons.privacy_tip_outlined,
+        menuItem(7, "Хобби", "hobby.png",
             currentPage == DrawerSections.hobby ? true : false),
-        menuItem(8, "Спорт", Icons.feedback_outlined,
+        menuItem(8, "Спорт", "sport.png",
             currentPage == DrawerSections.sport ? true : false),
-        menuItem(9, "Кино", Icons.feedback_outlined,
+        menuItem(9, "Кино", "movies.png",
             currentPage == DrawerSections.cinema ? true : false),
-        menuItem(10, "Жаңа ұсыныстар", Icons.feedback_outlined,
+        menuItem(10, "Жаңа ұсыныстар", "new_recommendation.png",
             currentPage == DrawerSections.new_recommendation ? true : false),
       ],
     );
   }
 
-  Widget menuItem(int id, String title, IconData icon, bool selected) {
+  Widget menuItem(int id, String title, String icon, bool selected) {
     return Material(
       color: selected ? Colors.red[200] : Colors.transparent,
       child: InkWell(
@@ -105,7 +109,7 @@ class NavigationState extends State<Navigation> {
             } else if (id == 4) {
               currentPage = DrawerSections.quiz;
             } else if (id == 5) {
-              currentPage = DrawerSections.maraphone;
+              currentPage = DrawerSections.marathon;
             } else if (id == 6) {
               currentPage = DrawerSections.proforintation;
             } else if (id == 7) {
@@ -120,18 +124,19 @@ class NavigationState extends State<Navigation> {
           });
         },
         child: Padding(
-          padding: EdgeInsets.all(15.0),
+          padding: EdgeInsets.all(10.0),
           child: Row(
             children: [
-              Expanded(
-                child: Icon(
-                  icon,
-                  size: 20,
-                  color: Colors.black,
-                ),
+              Image(
+                image: AssetImage('assets/icons/$icon'),
+                height: 30,
+                width: 30,
+              ),
+              const SizedBox(
+                width: 10,
               ),
               Expanded(
-                flex: 3,
+                flex: 2,
                 child: Text(
                   title,
                   style: TextStyle(
@@ -152,7 +157,7 @@ enum DrawerSections {
   cinema,
   hobby,
   library,
-  maraphone,
+  marathon,
   new_recommendation,
   podcast,
   proforintation,
