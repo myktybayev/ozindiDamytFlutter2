@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ozindi_damyt/core/navigation/navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,20 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text('Ozindi Damyt'),
-        ),
-        body: const Center(
-          child: Text('Main'),
-        ),
-      ),
+      home: Navigation(),
     );
   }
 }
