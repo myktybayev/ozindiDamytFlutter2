@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/core/navigation/my_header_drawer.dart';
-import 'package:ozindi_damyt/core/pades/cinema/cinema_page.dart';
-import 'package:ozindi_damyt/core/pades/hobby/hobby_page.dart';
-import 'package:ozindi_damyt/core/pades/library/library_page.dart';
-import 'package:ozindi_damyt/core/pades/maraphone/maraphone_page.dart';
-import 'package:ozindi_damyt/core/pades/new_recommendation/new_recommendation_page.dart';
-import 'package:ozindi_damyt/core/pades/podcast/podcast_page.dart';
-import 'package:ozindi_damyt/core/pades/proforintation/proforintation_page.dart';
-import 'package:ozindi_damyt/core/pades/quiz/quiz_page.dart';
-import 'package:ozindi_damyt/core/pades/sport/sport_page.dart';
-import 'package:ozindi_damyt/core/pades/stoury/stoury_page.dart';
-import 'package:pixel_perfect/pixel_perfect.dart';
+import 'package:ozindi_damyt/features/cinema/cinema_page.dart';
+import 'package:ozindi_damyt/features/hobby/hobby_page.dart';
+import 'package:ozindi_damyt/features/library/library_page.dart';
+import 'package:ozindi_damyt/features/maraphone/maraphone_page.dart';
+import 'package:ozindi_damyt/features/new_recommendation/new_recommendation_page.dart';
+import 'package:ozindi_damyt/features/podcast/pages/podcast_page.dart';
+import 'package:ozindi_damyt/features/proforintation/proforintation_page.dart';
+import 'package:ozindi_damyt/features/quiz/quiz_page.dart';
+import 'package:ozindi_damyt/features/sport/sport_page.dart';
+import 'package:ozindi_damyt/features/stoury/stoury_page.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({super.key});
@@ -46,31 +45,24 @@ class NavigationState extends State<Navigation> {
     } else if (currentPage == DrawerSections.new_recommendation) {
       container = NewRecommendationPage();
     }
-    return PixelPerfect(
-      assetPath: 'assets/images/design.jpg',
-      scale: 1,
-      initBottom: 20,
-      offset: Offset.zero,
-      initOpacity: 0.4,
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text('Ozindi Damyt'),
-        ),
-        drawer: Drawer(
-          width: 235,
-          child: ListView(
-            children: [
-              MyHeaderDrawer(),
-              const SizedBox(
-                height: 13,
-              ),
-              MyDrawerList()
-            ],
-          ),
-        ),
-        body: container,
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        title: const Text('All Page'),
       ),
+      drawer: Drawer(
+        width: 235,
+        child: ListView(
+          children: [
+            MyHeaderDrawer(),
+            const SizedBox(
+              height: 13,
+            ),
+            MyDrawerList()
+          ],
+        ),
+      ),
+      body: container,
     );
   }
 

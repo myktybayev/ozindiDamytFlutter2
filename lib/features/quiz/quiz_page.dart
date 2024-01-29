@@ -5,8 +5,10 @@ class QuizPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Quiz Page'),
+    return Scaffold(
+      body: Center(
+        child: Text('Quiz Page'),
+      ),
     );
   }
 }
