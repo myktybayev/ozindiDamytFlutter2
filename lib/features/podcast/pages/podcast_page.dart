@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ozindi_damyt/core/navigation/navigation.dart';
 import 'package:ozindi_damyt/features/podcast/pages/pages_of_widgets/all_widgets_page.dart';
 
 class PodcastPage extends StatelessWidget {
@@ -9,6 +10,11 @@ class PodcastPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          title: const Text('Podcast Page'),
+        ),
+        drawer: DrawerMenu(),
         body: AllWidgetsPage(),
       ),
     );

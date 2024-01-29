@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ozindi_damyt/core/navigation/navigation.dart';
+import 'package:ozindi_damyt/features/library/library_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Navigation(),
+      home: LibraryPage(),
     );
   }
 }
