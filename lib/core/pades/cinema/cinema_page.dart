@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ozindi_damyt/core/navigation/DrawerMenu.dart';
 
 class CinemaPage extends StatefulWidget {
   @override
@@ -8,8 +9,12 @@ class CinemaPage extends StatefulWidget {
 class _CinemaPageState extends State<CinemaPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
+    return Scaffold(
+      drawer: DrawerMenu(),
+      appBar: AppBar(
+        title: Text("Cinema Page"),
+      ),
+      body: Center(
         child: Text("Cinema page"),
       ),
     );
