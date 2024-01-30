@@ -1,21 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/core/navigation/navigation.dart';
+import 'package:ozindi_damyt/features/library/models/book_access.dart';
+import 'package:ozindi_damyt/features/library/pages/body_page.dart';
+import 'package:provider/provider.dart';
 
 class LibraryPage extends StatelessWidget {
-  const LibraryPage({super.key});
+  const LibraryPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        drawer: DrawerMenu(),
-        appBar: AppBar(
-          title: Text('Library Page'),
+    return Scaffold(
+      drawer: DrawerMenu(),
+      appBar: AppBar(
+        title: Text('Library Page'),
+      ),
+      body: Expanded(
+        child: SingleChildScrollView(
+          child: Provider<BookAccess>(
+            create: (context) =>
+                BookAccess(), // Replace BookAccess with your actual provider class
+            child: BodyPage(),
+          ),
         ),
-        body: Center(
-          child: Text('Kitaphana Page'),
-        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/add_book');
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }

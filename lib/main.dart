@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/features/library/library_page.dart';
+import 'package:ozindi_damyt/features/library/models/book_access.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => BookAccess(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

@@ -19,7 +19,6 @@ class StouryPage extends StatelessWidget {
             ],
           ),
           child: AppBar(
-            shadowColor: Colors.black,
             title: Text('Stoury Page'),
           ),
         ),

@@ -19,7 +19,7 @@ class DrawerMenu extends StatefulWidget {
 }
 
 class DrawerMenuState extends State<DrawerMenu> {
-  var currentPage = DrawerSections.library;
+  var currentPage;
 
   @override
   Widget build(BuildContext context) {
@@ -133,31 +133,33 @@ class DrawerMenuState extends State<DrawerMenu> {
       color: selected ? Colors.red[200] : Colors.transparent,
       child: InkWell(
         onTap: () {
+          setState(
+            () {
+              if (id == 1) {
+                currentPage = DrawerSections.library;
+              } else if (id == 2) {
+                currentPage = DrawerSections.stoury;
+              } else if (id == 3) {
+                currentPage = DrawerSections.podcast;
+              } else if (id == 4) {
+                currentPage = DrawerSections.quiz;
+              } else if (id == 5) {
+                currentPage = DrawerSections.marathon;
+              } else if (id == 6) {
+                currentPage = DrawerSections.proforintation;
+              } else if (id == 7) {
+                currentPage = DrawerSections.hobby;
+              } else if (id == 8) {
+                currentPage = DrawerSections.sport;
+              } else if (id == 9) {
+                currentPage = DrawerSections.cinema;
+              } else if (id == 10) {
+                currentPage = DrawerSections.new_recommendation;
+              }
+            },
+          );
           Navigator.of(context).pop();
           Navigator.push(context, materialPageRoute);
-          setState(() {
-            if (id == 1) {
-              currentPage = DrawerSections.library;
-            } else if (id == 2) {
-              currentPage = DrawerSections.stoury;
-            } else if (id == 3) {
-              currentPage = DrawerSections.podcast;
-            } else if (id == 4) {
-              currentPage = DrawerSections.quiz;
-            } else if (id == 5) {
-              currentPage = DrawerSections.marathon;
-            } else if (id == 6) {
-              currentPage = DrawerSections.proforintation;
-            } else if (id == 7) {
-              currentPage = DrawerSections.hobby;
-            } else if (id == 8) {
-              currentPage = DrawerSections.sport;
-            } else if (id == 9) {
-              currentPage = DrawerSections.cinema;
-            } else if (id == 10) {
-              currentPage = DrawerSections.new_recommendation;
-            }
-          });
         },
         child: Padding(
           padding: EdgeInsets.all(10.0),

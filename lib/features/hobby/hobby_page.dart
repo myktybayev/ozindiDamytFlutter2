@@ -15,7 +15,7 @@ class _HobbyPageState extends State<HobbyPage> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(60),
+              color: Colors.grey.withOpacity(0.5),
               blurRadius: 10,
               spreadRadius: 3,
             ),
@@ -25,7 +25,7 @@ class _HobbyPageState extends State<HobbyPage> {
           appBar: AppBar(
             title: Text('Hobby Page'),
           ),
-          drawer: DrawerMenu(),
+          drawer: DrawerMenu(), // Now you can use DrawerMenu
           body: Container(
             child: Center(
               child: Text("Hobby Page"),
