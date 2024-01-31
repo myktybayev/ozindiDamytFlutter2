@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ozindi_damyt/core/navigation/navigation.dart';
 import 'package:ozindi_damyt/features/quiz/features/quizziz_body.dart';
 
 class QuizPage extends StatelessWidget {
@@ -9,8 +10,9 @@ class QuizPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        drawer: DrawerMenu(),
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Colors.white,
           title: const Text('Podcast Page'),
         ),
         body: QuizzizBody(),

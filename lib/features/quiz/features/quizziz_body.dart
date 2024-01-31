@@ -36,7 +36,7 @@ Widget _quizList(BuildContext context) {
     child: Column(
       children: <Widget>[
         _listItem(
-          Image.asset('assets/images/android.jpeg'),
+          Image.asset('assets/images/quiz/android.jpeg'),
           'Андроид сабағы',
           context,
         ),
@@ -44,7 +44,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/flutter.jpeg'),
+          Image.asset('assets/images/quiz/flutter.jpeg'),
           'Dart & Flutter сабағы',
           context,
         ),
@@ -52,7 +52,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/blender.jpeg'),
+          Image.asset('assets/images/quiz/blender.jpeg'),
           'Full-stack веб сабағы',
           context,
         ),
@@ -60,7 +60,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/kotlin.jpeg'),
+          Image.asset('assets/images/quiz/kotlin.jpeg'),
           'Full-stack веб сабағы',
           context,
         ),
@@ -68,7 +68,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/java.jpeg'),
+          Image.asset('assets/images/quiz/java.jpeg'),
           'Full-stack веб сабағы',
           context,
         ),
@@ -76,7 +76,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/full_stack.jpeg'),
+          Image.asset('assets/images/quiz/full_stack.jpeg'),
           'Full-stack веб сабағы',
           context,
         ),
@@ -84,7 +84,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/android.jpeg'),
+          Image.asset('assets/images/quiz/android.jpeg'),
           'Андроид сабағы',
           context,
         ),
@@ -92,7 +92,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/flutter.jpeg'),
+          Image.asset('assets/images/quiz/flutter.jpeg'),
           'Dart & Flutter сабағы',
           context,
         ),
@@ -100,7 +100,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/blender.jpeg'),
+          Image.asset('assets/images/quiz/blender.jpeg'),
           'Full-stack веб сабағы',
           context,
         ),
@@ -108,7 +108,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/kotlin.jpeg'),
+          Image.asset('assets/images/quiz/kotlin.jpeg'),
           'Full-stack веб сабағы',
           context,
         ),
@@ -116,7 +116,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/java.jpeg'),
+          Image.asset('assets/images/quiz/java.jpeg'),
           'Full-stack веб сабағы',
           context,
         ),
@@ -124,7 +124,7 @@ Widget _quizList(BuildContext context) {
           height: 16,
         ),
         _listItem(
-          Image.asset('assets/images/full_stack.jpeg'),
+          Image.asset('assets/images/quiz/full_stack.jpeg'),
           'Full-stack веб сабағы',
           context,
         ),
