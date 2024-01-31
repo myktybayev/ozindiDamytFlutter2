@@ -211,9 +211,3 @@ class _QuizzizScreenState extends State<QuizzizScreen> {
     );
   }
 }
-
-void main() {
-  runApp(MaterialApp(
-    home: QuizzizScreen(),
-  ));
-}

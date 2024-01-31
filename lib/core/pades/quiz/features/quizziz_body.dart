@@ -80,6 +80,54 @@ Widget _quizList(BuildContext context) {
           'Full-stack веб сабағы',
           context,
         ),
+        SizedBox(
+          height: 16,
+        ),
+        _listItem(
+          Image.asset('assets/images/android.jpeg'),
+          'Андроид сабағы',
+          context,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        _listItem(
+          Image.asset('assets/images/flutter.jpeg'),
+          'Dart & Flutter сабағы',
+          context,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        _listItem(
+          Image.asset('assets/images/blender.jpeg'),
+          'Full-stack веб сабағы',
+          context,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        _listItem(
+          Image.asset('assets/images/kotlin.jpeg'),
+          'Full-stack веб сабағы',
+          context,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        _listItem(
+          Image.asset('assets/images/java.jpeg'),
+          'Full-stack веб сабағы',
+          context,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        _listItem(
+          Image.asset('assets/images/full_stack.jpeg'),
+          'Full-stack веб сабағы',
+          context,
+        ),
       ],
     ),
   );
@@ -97,6 +145,8 @@ Widget _listItem(Image img, String title, BuildContext context) {
       child: Row(
         children: <Widget>[
           Container(
+            // width: 180, // Установите желаемую ширину изображения
+            // height: 180, // Установите желаемую высоту изображения
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
               child: img,
