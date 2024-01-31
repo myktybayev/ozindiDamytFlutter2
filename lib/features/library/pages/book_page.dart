@@ -5,7 +5,7 @@ import 'package:ozindi_damyt/features/library/models/book_details.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class BookPage extends StatelessWidget {
-  final Book? book; // Declare book as nullable
+  final Book? book;
   BookPage({Key? key, required this.book});
 
   @override
@@ -19,7 +19,6 @@ class BookPage extends StatelessWidget {
 
   Widget bodyPage(BuildContext context) {
     if (book == null) {
-      // Handle case where book is null
       return Center(
         child: Text('Book not found'),
       );

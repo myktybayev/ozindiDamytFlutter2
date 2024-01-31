@@ -14,13 +14,10 @@ class LibraryPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Library Page'),
       ),
-      body: Expanded(
-        child: SingleChildScrollView(
-          child: Provider<BookAccess>(
-            create: (context) =>
-                BookAccess(), // Replace BookAccess with your actual provider class
-            child: BodyPage(),
-          ),
+      body: SingleChildScrollView(
+        child: Provider<BookAccess>(
+          create: (context) => BookAccess(),
+          child: BodyPage(),
         ),
       ),
       floatingActionButton: FloatingActionButton(

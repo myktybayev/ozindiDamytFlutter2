@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/features/library/models/book_access.dart';
-import 'package:ozindi_damyt/features/library/pages/book_page.dart'; // Import your BookPage
-import 'package:provider/provider.dart';
+import 'package:ozindi_damyt/features/library/models/book_details.dart';
 
 class BodyPage extends StatelessWidget {
   BodyPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    var bookProvider = Provider.of<BookAccess>(context);
+    // Fetching books directly without Provider
+    List<Book> books = BookAccess().books;
 
     return Center(
       child: Column(
         children: [
-          latestBookContainer(context, bookProvider.books),
+          latestBookContainer(context, books),
           constantText("Жаңа кітаптар"),
-          rowOfBooks(bookProvider.books),
+          rowOfBooks(books),
           constantText("Ұсынылған"),
-          rowOfBooks(bookProvider.books),
+          rowOfBooks(books),
           constantText("Көп оқылған"),
-          rowOfBooks(bookProvider.books),
+          rowOfBooks(books),
         ],
       ),
     );
   }
 
-  Widget latestBookContainer(BuildContext context, List books) {
+  Widget latestBookContainer(BuildContext context, List<Book> books) {
     return Container(
       padding: EdgeInsets.all(20),
       width: MediaQuery.of(context).size.width,
@@ -36,7 +36,7 @@ class BodyPage extends StatelessWidget {
           fit: BoxFit.fill,
           image: AssetImage('assets/images/library/pole.jpeg'),
           colorFilter: ColorFilter.mode(
-            Colors.black.withOpacity(0.5), // Adjust opacity as needed
+            Colors.black.withOpacity(0.5),
             BlendMode.srcATop,
           ),
         ),
@@ -55,30 +55,33 @@ class BodyPage extends StatelessWidget {
                   "Осы айдың ең жаңа кітабы",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 22,
-                      color: Colors.white,
-                      fontFamily: 'Comfortaa',
-                      fontWeight: FontWeight.normal),
+                    fontSize: 22,
+                    color: Colors.white,
+                    fontFamily: 'Comfortaa',
+                    fontWeight: FontWeight.normal,
+                  ),
                 ),
                 SizedBox(height: 8),
                 Text(
                   books[books.length - 1].title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white,
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.bold),
+                    fontSize: 15,
+                    color: Colors.white,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 SizedBox(height: 3),
                 Text(
                   books[books.length - 1].author,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white,
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.normal),
+                    fontSize: 15,
+                    color: Colors.white,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.normal,
+                  ),
                 ),
               ],
             ),
@@ -96,16 +99,17 @@ class BodyPage extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Montserrat',
-              color: Colors.black),
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Montserrat',
+            color: Colors.black,
+          ),
         ),
       ),
     );
   }
 
-  Widget rowOfBooks(List books) {
+  Widget rowOfBooks(List<Book> books) {
     return Container(
       alignment: Alignment.centerRight,
       padding: EdgeInsets.only(left: 15),
@@ -119,34 +123,31 @@ class BodyPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => BookPage(book: books[index])),
-              );
+              Navigator.pushNamed(context, '/book_page',
+                  arguments: books[index]);
             },
             child: Column(
               children: [
                 image(books[index].imageUrl),
-                SizedBox(
-                  height: 5,
-                ),
+                SizedBox(height: 5),
                 Text(
                   books[index].title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 10),
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 10,
+                  ),
                 ),
                 Text(
                   books[index].author,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.normal,
-                      fontSize: 10),
-                )
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.normal,
+                    fontSize: 10,
+                  ),
+                ),
               ],
             ),
           );
@@ -162,9 +163,7 @@ class BodyPage extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.fill,
-          image: NetworkImage(
-            url,
-          ),
+          image: NetworkImage(url),
         ),
         borderRadius: BorderRadius.circular(8.0),
       ),

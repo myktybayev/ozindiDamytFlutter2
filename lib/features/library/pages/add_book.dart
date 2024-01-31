@@ -3,7 +3,7 @@ import 'package:ozindi_damyt/features/library/models/book_access.dart';
 import 'package:provider/provider.dart';
 
 class AddBook extends StatelessWidget {
-  AddBook({super.key});
+  AddBook({Key? key}) : super(key: key);
   final TextEditingController bookNameController = TextEditingController();
   final TextEditingController bookAuthorController = TextEditingController();
   final TextEditingController bookDescController = TextEditingController();
@@ -36,69 +36,65 @@ class AddBook extends StatelessWidget {
           icon: Icon(Icons.menu),
         ),
       ),
-      body: Expanded(
-        child: SingleChildScrollView(
-          child: Form(
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  const Text(
-                    'Add your book here',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Montserrat',
-                      fontSize: 30,
-                    ),
-                  ),
-                  TextFormField(
-                    controller: bookNameController,
-                    decoration: const InputDecoration(
-                      labelText: 'Enter name of book',
-                    ),
-                  ),
-                  TextFormField(
-                    controller: bookAuthorController,
-                    decoration: const InputDecoration(
-                      labelText: 'Enter author of book',
-                    ),
-                  ),
-                  TextFormField(
-                    controller: bookDescController,
-                    decoration: const InputDecoration(
-                      labelText: 'Enter description of book',
-                    ),
-                    maxLines: 4,
-                  ),
-                  TextFormField(
-                    controller: bookUrlController,
-                    decoration: const InputDecoration(
-                      labelText: 'Paste image url of book',
-                    ),
-                  ),
-                  TextFormField(
-                    controller: bookSourceController,
-                    decoration: const InputDecoration(
-                      labelText: 'Enter reading source of book',
-                    ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        bookProvider.addBook(
-                            bookNameController.text,
-                            bookAuthorController.text,
-                            bookUrlController.text,
-                            bookDescController.text,
-                            bookSourceController.text);
-                        Navigator.pushNamed(context, '/');
-                      },
-                      child: Text('Submit'))
-                ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              const Text(
+                'Add your book here',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Montserrat',
+                  fontSize: 30,
+                ),
               ),
-            ),
+              TextFormField(
+                controller: bookNameController,
+                decoration: const InputDecoration(
+                  labelText: 'Enter name of book',
+                ),
+              ),
+              TextFormField(
+                controller: bookAuthorController,
+                decoration: const InputDecoration(
+                  labelText: 'Enter author of book',
+                ),
+              ),
+              TextFormField(
+                controller: bookDescController,
+                decoration: const InputDecoration(
+                  labelText: 'Enter description of book',
+                ),
+                maxLines: 4,
+              ),
+              TextFormField(
+                controller: bookUrlController,
+                decoration: const InputDecoration(
+                  labelText: 'Paste image url of book',
+                ),
+              ),
+              TextFormField(
+                controller: bookSourceController,
+                decoration: const InputDecoration(
+                  labelText: 'Enter reading source of book',
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    bookProvider.addBook(
+                        bookNameController.text,
+                        bookAuthorController.text,
+                        bookUrlController.text,
+                        bookDescController.text,
+                        bookSourceController.text);
+                    Navigator.pushNamed(context, '/');
+                  },
+                  child: Text('Submit'))
+            ],
           ),
         ),
       ),
