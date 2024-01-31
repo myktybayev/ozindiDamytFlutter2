@@ -11,7 +11,7 @@ class PodcastPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Colors.white,
           title: const Text('Podcast Page'),
         ),
         drawer: DrawerMenu(),
