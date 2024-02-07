@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/core/navigation/navigation.dart';
+import 'package:ozindi_damyt/features/proforintation/pages/list.dart';
 
 class ProforintationPage extends StatelessWidget {
   const ProforintationPage({super.key});
@@ -21,13 +22,11 @@ class ProforintationPage extends StatelessWidget {
             ],
           ),
           child: AppBar(
-            title: Text('Proforintation page'),
+            title: Text('Hobby'),
           ),
         ),
       ),
-      body: Center(
-        child: Text('Proforintation Page'),
-      ),
+      body: ListWidget(),
     );
   }
 }

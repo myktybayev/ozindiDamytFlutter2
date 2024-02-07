@@ -2,13 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/features/library/models/book_access.dart';
 import 'package:provider/provider.dart';
 
-class AddBook extends StatelessWidget {
+class AddBook extends StatefulWidget {
   AddBook({Key? key}) : super(key: key);
+
+  @override
+  State<AddBook> createState() => _AddBookState();
+}
+
+class _AddBookState extends State<AddBook> {
   final TextEditingController bookNameController = TextEditingController();
   final TextEditingController bookAuthorController = TextEditingController();
   final TextEditingController bookDescController = TextEditingController();
   final TextEditingController bookUrlController = TextEditingController();
   final TextEditingController bookSourceController = TextEditingController();
+
+  @override
+  void dispose() {
+    bookNameController.dispose();
+    bookAuthorController.dispose();
+    bookDescController.dispose();
+    bookUrlController.dispose();
+    bookSourceController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

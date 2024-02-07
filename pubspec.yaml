@@ -42,6 +42,7 @@ dependencies:
   path_provider: ^2.0.2
   provider: 6.1.1
   flutter_rating_bar: ^4.0.1
+  youtube_player_flutter: ^8.1.2
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,7 @@ flutter:
      - assets/images/podcast/
      - assets/images/library/
      - assets/images/quiz/
+     - assets/images/hobby/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
