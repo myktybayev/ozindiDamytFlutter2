@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/features/library/models/book_access.dart';
 import 'package:ozindi_damyt/features/library/models/book_details.dart';
+import 'package:ozindi_damyt/features/library/pages/book_page.dart';
 
 class BodyPage extends StatelessWidget {
   BodyPage({Key? key});
@@ -123,8 +124,12 @@ class BodyPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              Navigator.pushNamed(context, '/book_page',
-                  arguments: books[index]);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BookPage(book: books[index]),
+                ),
+              );
             },
             child: Column(
               children: [
