@@ -7,7 +7,7 @@ import 'package:ozindi_damyt/features/new_recommendation/new_recommendation_page
 import 'package:ozindi_damyt/features/podcast/pages/podcast_page.dart';
 import 'package:ozindi_damyt/features/proforintation/proforintation_page.dart';
 import 'package:ozindi_damyt/features/quiz/quiz_page.dart';
-import 'package:ozindi_damyt/features/sport/sport_page.dart';
+import 'package:ozindi_damyt/features/sport/sport.dart';
 import 'package:ozindi_damyt/features/stoury/stoury_page.dart';
 
 class MyDrawerList extends StatefulWidget {
