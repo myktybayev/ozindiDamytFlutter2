@@ -22,7 +22,7 @@ class ProforintationPage extends StatelessWidget {
             ],
           ),
           child: AppBar(
-            title: Text('Hobby'),
+            title: Text('Proforintation'),
           ),
         ),
       ),
