@@ -74,6 +74,7 @@ flutter:
      - assets/images/library/
      - assets/images/quiz/
      - assets/images/hobby/
+     - assets/images/proforintation/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
