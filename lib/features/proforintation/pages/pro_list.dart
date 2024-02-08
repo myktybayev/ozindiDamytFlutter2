@@ -34,14 +34,14 @@ List<Map<String, dynamic>> hobby = [
   }
 ];
 
-class ListWidget extends StatefulWidget {
-  const ListWidget({Key? key}) : super(key: key);
+class ProListWidget extends StatefulWidget {
+  const ProListWidget({Key? key}) : super(key: key);
 
   @override
-  _ListWidgetState createState() => _ListWidgetState();
+  _ProListWidgetState createState() => _ProListWidgetState();
 }
 
-class _ListWidgetState extends State<ListWidget> {
+class _ProListWidgetState extends State<ProListWidget> {
   bool _loading = false;
 
   void _toggleLoading(bool value) {

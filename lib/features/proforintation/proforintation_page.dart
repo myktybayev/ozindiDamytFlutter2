@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/core/navigation/navigation.dart';
-import 'package:ozindi_damyt/features/proforintation/pages/list.dart';
+import 'package:ozindi_damyt/features/proforintation/pages/pro_list.dart';
 
 class ProforintationPage extends StatelessWidget {
   const ProforintationPage({super.key});
@@ -26,7 +26,7 @@ class ProforintationPage extends StatelessWidget {
           ),
         ),
       ),
-      body: ListWidget(),
+      body: ProListWidget(),
     );
   }
 }
