@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/core/navigation/navigation.dart';
-import 'package:ozindi_damyt/features/sport/pages/list.dart';
+import 'package:ozindi_damyt/features/sport/pages/sport_list.dart';
 
 class SportPage extends StatelessWidget {
   const SportPage({super.key});

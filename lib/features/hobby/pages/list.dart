@@ -10,25 +10,25 @@ List<Map<String, dynamic>> hobby = [
   },
   {
     "id": 2,
-    "photo": "assets/images/hobby/prof_img_1.png",
+    "photo": "assets/images/hobby/tatti_pisiru.png",
     "name": "Тәтті пісіру",
     "url": "UCzWAedCZRs02RxuEzX7bzDw"
   },
   {
     "id": 3,
-    "photo": "assets/images/hobby/img_3.png",
+    "photo": "assets/images/hobby/beg_img_3.png",
     "name": "Фотошоп уйрену",
     "url": "UCkacKUAoMrtllypQ3yAsjIQ"
   },
   {
     "id": 4,
-    "photo": "assets/images/hobby/img_2.png",
+    "photo": "assets/images/hobby/ches_img_2.png",
     "name": "Шахмат үйрену",
     "url": "UCqR09MTvuIYcQVDupvv6Wxw"
   },
   {
     "id": 5,
-    "photo": "assets/images/hobby/img_4.png",
+    "photo": "assets/images/hobby/eng_img.png",
     "name": "Ағылшын үйрену",
     "url": "UC_3oKG5Szq-m6Xz-MjRZgpw"
   }
