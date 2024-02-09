@@ -8,9 +8,9 @@ class ProforintationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DrawerMenu(),
+      drawer: const DrawerMenu(),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(60),
         child: Container(
           decoration: BoxDecoration(
             boxShadow: [
@@ -22,11 +22,11 @@ class ProforintationPage extends StatelessWidget {
             ],
           ),
           child: AppBar(
-            title: Text('Proforintation'),
+            title: const Text('Proforintation'),
           ),
         ),
       ),
-      body: ProListWidget(),
+      body: const ProListWidget(),
     );
   }
 }

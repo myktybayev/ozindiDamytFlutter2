@@ -21,10 +21,10 @@ class ProListWidget extends StatefulWidget {
   const ProListWidget({Key? key}) : super(key: key);
 
   @override
-  _ProListWidgetState createState() => _ProListWidgetState();
+  ProListWidgetState createState() => ProListWidgetState();
 }
 
-class _ProListWidgetState extends State<ProListWidget> {
+class ProListWidgetState extends State<ProListWidget> {
   bool _loading = false;
 
   void _toggleLoading(bool value) {
@@ -65,7 +65,7 @@ class _ProListWidgetState extends State<ProListWidget> {
                               color: Colors.grey.withOpacity(0.5),
                               spreadRadius: 6,
                               blurRadius: 7,
-                              offset: Offset(0, 3),
+                              offset: const Offset(0, 3),
                             ),
                           ],
                         ),
@@ -83,7 +83,7 @@ class _ProListWidgetState extends State<ProListWidget> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 270, top: 10),
-                        child: Container(
+                        child: SizedBox(
                           width: 80,
                           height: 80,
                           child: Image.asset(

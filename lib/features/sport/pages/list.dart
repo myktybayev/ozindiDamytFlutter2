@@ -32,10 +32,10 @@ class SportListWidget extends StatefulWidget {
   const SportListWidget({Key? key}) : super(key: key);
 
   @override
-  _SportListWidgetState createState() => _SportListWidgetState();
+  SportListWidgetState createState() => SportListWidgetState();
 }
 
-class _SportListWidgetState extends State<SportListWidget> {
+class SportListWidgetState extends State<SportListWidget> {
   bool _loading = false;
 
   void _toggleLoading(bool value) {
@@ -70,10 +70,7 @@ class _SportListWidgetState extends State<SportListWidget> {
                   key: ValueKey(hobby[index]["id"]),
                   child: Stack(
                     children: [
-                      Container(
-                        child: Image.asset(hobby[index]["photo"],
-                            fit: BoxFit.fill),
-                      ),
+                      Image.asset(hobby[index]["photo"], fit: BoxFit.fill),
                       Padding(
                         padding: const EdgeInsets.only(left: 20, top: 10),
                         child: Text(
