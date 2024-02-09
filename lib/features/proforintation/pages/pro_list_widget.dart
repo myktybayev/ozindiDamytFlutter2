@@ -5,13 +5,13 @@ import 'package:url_launcher/url_launcher.dart';
 List<Map<String, dynamic>> hobby = [
   {
     "id": 1,
-    "photo": "assets/images/proforintation/marathones.png",
+    "photo": "assets/images/proforintation/prof_img.png",
     "text": "Profonline.kz",
     "url": "https://profonline.kz"
   },
   {
     "id": 2,
-    "photo": "assets/images/proforintation/img_1.png",
+    "photo": "assets/images/proforintation/prof_img_1.png",
     "text": "Nova Education",
     "url": "https://novaedu.kz/"
   },

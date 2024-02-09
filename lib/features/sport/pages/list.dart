@@ -4,13 +4,13 @@ import 'package:ozindi_damyt/features/hobby/pages/loadingpage.dart';
 List<Map<String, dynamic>> hobby = [
   {
     "id": 1,
-    "photo": "assets/images/sport/img_1.png",
+    "photo": "assets/images/sport/prof_img_1.png",
     "name": "Бокс",
     "url": "UCyTeUcItLiosZvtHHOFAKLQ"
   },
   {
     "id": 2,
-    "photo": "assets/images/sport/marathones.png",
+    "photo": "assets/images/sport/nag_img.png",
     "name": "Физическая нагрузка",
     "url": "UCzWAedCZRs02RxuEzX7bzDw"
   },
