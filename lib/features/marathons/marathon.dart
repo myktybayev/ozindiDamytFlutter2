@@ -22,7 +22,7 @@ class MaraphonePage extends StatelessWidget {
             ],
           ),
           child: AppBar(
-            title: const Text('Sport'),
+            title: const Text('Marathone'),
           ),
         ),
       ),
