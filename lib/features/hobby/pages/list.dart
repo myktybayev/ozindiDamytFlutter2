@@ -4,7 +4,7 @@ import 'package:ozindi_damyt/features/hobby/pages/loadingpage.dart';
 List<Map<String, dynamic>> hobby = [
   {
     "id": 1,
-    "photo": "assets/images/hobby/img.png",
+    "photo": "assets/images/hobby/marathones.png",
     "name": "Домбыра үйрену",
     "url": "UCyTeUcItLiosZvtHHOFAKLQ"
   },

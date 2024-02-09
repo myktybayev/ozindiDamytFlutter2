@@ -42,7 +42,7 @@ class _AllWidgetsPageState extends State<AllWidgetsPage> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.asset('assets/images/podcast/img.png'),
+            Image.asset('assets/images/podcast/marathones.png'),
             const Positioned(
               left: 20,
               child: Text(

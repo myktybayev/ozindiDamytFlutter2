@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/core/navigation/navigation.dart';
+import 'package:ozindi_damyt/features/marathons/pages/list.dart';
 
 class MaraphonePage extends StatelessWidget {
   const MaraphonePage({super.key});
@@ -7,27 +8,25 @@ class MaraphonePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DrawerMenu(),
+      drawer: const DrawerMenu(),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
+        preferredSize: const Size.fromHeight(60),
         child: Container(
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withOpacity(0.5),
-                blurRadius: 10,
                 spreadRadius: 3,
-              ),
+                blurRadius: 10,
+              )
             ],
           ),
           child: AppBar(
-            title: Text('Maraphone Page'),
+            title: const Text('Sport'),
           ),
         ),
       ),
-      body: Center(
-        child: Text('Maraphone Page'),
-      ),
+      body: const MaraphoneListWidget(),
     );
   }
 }

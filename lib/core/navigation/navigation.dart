@@ -3,7 +3,7 @@ import 'package:ozindi_damyt/core/navigation/my_header_drawer.dart';
 import 'package:ozindi_damyt/features/cinema/cinema_page.dart';
 import 'package:ozindi_damyt/features/hobby/hobby_page.dart';
 import 'package:ozindi_damyt/features/library/library_page.dart';
-import 'package:ozindi_damyt/features/maraphone/maraphone_page.dart';
+import 'package:ozindi_damyt/features/marathons/marathon.dart';
 import 'package:ozindi_damyt/features/new_recommendation/new_recommendation_page.dart';
 import 'package:ozindi_damyt/features/podcast/pages/podcast_page.dart';
 import 'package:ozindi_damyt/features/proforintation/proforintation_page.dart';

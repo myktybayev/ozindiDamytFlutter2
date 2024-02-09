@@ -10,7 +10,7 @@ List<Map<String, dynamic>> hobby = [
   },
   {
     "id": 2,
-    "photo": "assets/images/sport/img.png",
+    "photo": "assets/images/sport/marathones.png",
     "name": "Физическая нагрузка",
     "url": "UCzWAedCZRs02RxuEzX7bzDw"
   },
