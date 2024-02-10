@@ -11,8 +11,22 @@ class LibraryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: DrawerMenu(),
-      appBar: AppBar(
-        title: Text('Library Page'),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(60),
+        child: Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 3,
+                blurRadius: 10,
+              )
+            ],
+          ),
+          child: AppBar(
+            title: const Text('Кітапхана'),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Provider<BookAccess>(
