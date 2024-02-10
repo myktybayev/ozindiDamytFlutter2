@@ -8,7 +8,7 @@ List<Map<String, dynamic>> marathone = [
     "type_mara": "Кітап оқу марафоны",
     "date": "22.01- 1.02",
     "gift": "Меломан дүкендер желісінен кітап",
-    "photo": "assets/images/marathones/prof_img.png",
+    "photo": "assets/images/marathones/mara_img.png",
   },
 ];
 
