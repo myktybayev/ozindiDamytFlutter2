@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ozindi_damyt/core/navigation/navigation.dart';
+import 'package:ozindi_damyt/features/cinema/page/catalog_widget.dart';
 
 class CinemaPage extends StatefulWidget {
   @override
@@ -24,13 +25,29 @@ class _CinemaPageState extends State<CinemaPage> {
             ],
           ),
           child: AppBar(
+            actions: const [
+              Icon(
+                Icons.search,
+                color: Colors.black,
+                size: 30,
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Icon(
+                Icons.filter_list,
+                color: Colors.black,
+                size: 30,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+            ],
             title: const Text('Кино'),
           ),
         ),
       ),
-      body: Center(
-        child: Text("Cinema page"),
-      ),
+      body: CatalogWidget(),
     );
   }
 }
